@@ -46,6 +46,7 @@ int main() {
             if (!found || compare_artefak(artfk[i], best_artefak) < 0) {
                 best_artefak = artfk[i];
                 i = n -1;
+                artfk[i];
                 found = 1;
                 
             }
