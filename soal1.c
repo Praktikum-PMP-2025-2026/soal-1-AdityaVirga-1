@@ -3,8 +3,8 @@
 #include <string.h>
 
 typedef struct {
-    char* name;
-    char* kategori;
+    char name;
+    char kategori;
     int tahun;
     int nilai;
 } artefak;
@@ -18,8 +18,8 @@ int compare_artefak(artefak a, artefak b) {
     if (a.tahun != b.tahun) {
         return a.tahun - b.tahun; // tahun lebih kecil diatas
     }
-    return strcmp(a.name, b.name); // Nama alfabetis lebih awal lebih baik
-    return strcmp(a.kategori, b.kategori); // kategori dengan alfabetis lebih awal lebih baik
+    return strcpy(a.name, b.name); // Nama alfabetis lebih awal lebih baik
+    return strcpy(a.kategori, b.kategori); // kategori dengan alfabetis lebih awal lebih baik
 }
 
 int main() {
@@ -43,7 +43,7 @@ int main() {
 
         for (int i = 0; i < n; i++) {
             // Jika ini artefak pertama yang ditemukan atau lebih baik dari yang terbaik sejauh ini
-            if (!found || compare_guards(artfk[i], best_artefak) < 0) {
+            if (!found || compare_artefak(artfk[i], best_artefak) < 0) {
                 best_artefak = artfk[i];
                 found = 1;
                 
