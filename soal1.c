@@ -3,8 +3,8 @@
 #include <string.h>
 
 typedef struct {
-    char name;
-    char kategori;
+    char* name;
+    char* kategori;
     int tahun;
     int nilai;
 } artefak;
