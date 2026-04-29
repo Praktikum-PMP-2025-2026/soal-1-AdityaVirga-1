@@ -3,7 +3,7 @@
 #include <string.h>
 
 typedef struct {
-    char name[100];
+    char name;
     char kategori;
     int tahun;
     int nilai;
