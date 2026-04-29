@@ -36,26 +36,21 @@ int main() {
         scanf("%s %s %d %d", artfk[i].name, &artfk[i].kategori, artfk[i].tahun, &artfk[i].nilai);
     }
 
-    char *name[] = {"Orb", "Rune", "Aegis", "Zeta", "Alpha", "Beta", "Gamma", "A", "B", "C","N1", "N2", "N3", "N4", "N5", "N6"};
-
-    // Mencari dan mencetak penjaga terbaik untuk setiap shift
-    for (int s = 0; s < 12; s++) {
+    // Mencari dan mencetak penjaga terbaik untuk setiap nama artefak
+    for (int i = 0; i < n; i++) {
         artefak best_artefak;
         int found = 0;
 
         for (int i = 0; i < n; i++) {
-            // Memeriksa apakah penjaga berada di shift yang sedang dievaluasi
-            if (strcmp(artfk[i].name, name[s]) == 0) {
-                // Jika ini penjaga pertama yang ditemukan atau lebih baik dari yang terbaik sejauh ini
-                if (!found || compare_guards(artfk[i], best_artefak) < 0) {
-                    best_artefak = artfk[i];
-                    found = 1;
-                }
+            // Jika ini artefak pertama yang ditemukan atau lebih baik dari yang terbaik sejauh ini
+            if (!found || compare_guards(artfk[i], best_artefak) < 0) {
+                best_artefak = artfk[i];
+                found = 1;
+                
             }
         }
 
         // Mencetak hasil sesuai format
-        printf("%s ", name[s]);
         if (found) {
             printf("%s %s %d %d\n", best_artefak.name, best_artefak.kategori, best_artefak.tahun, best_artefak.nilai);
         } else {
