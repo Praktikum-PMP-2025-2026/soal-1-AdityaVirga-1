@@ -43,14 +43,14 @@ int main() {
 
         for (int i = 0; i < n; i++) {
             // Jika ini artefak pertama yang ditemukan atau lebih baik dari yang terbaik sejauh ini
-            if (!found || compare_(artfk[i], best_artefak) < 0) {
+            if (!found || compare_artefak(artfk[i], best_artefak) < 0) {
                 best_artefak = artfk[i];
                 found = 1;
             }
         }
         
         // Mencetak hasil sesuai format
-    printf("%s %d %d\n", best_artefak.name, best_artefak.kategori, best_artefak.tahun, best_artefak.nilai);
+    printf("%s %s %d %d\n", best_artefak.name, best_artefak.kategori, best_artefak.tahun, best_artefak.nilai);
     }  
 
     // Bebaskan memori
