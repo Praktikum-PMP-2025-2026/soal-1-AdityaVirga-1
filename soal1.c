@@ -47,7 +47,7 @@ int main() {
                 best_artefak = artfk[i];
                 i = i -1; 
                 found = 1;
-                
+                return i;
             }
         }
 
