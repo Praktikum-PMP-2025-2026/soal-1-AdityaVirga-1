@@ -34,7 +34,6 @@ int main() {
     // Membaca input setiap artefak
     for (int i = 0; i < n; i++) {
         scanf("%s %s %d %d", artfk[i].name, artfk[i].kategori, &artfk[i].tahun, &artfk[i].nilai);
-        return 0;
     }
 
     // Mencari dan mencetak penjaga terbaik untuk setiap nama artefak
