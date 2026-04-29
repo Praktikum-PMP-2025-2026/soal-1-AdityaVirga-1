@@ -18,8 +18,8 @@ int compare_artefak(artefak a, artefak b) {
     if (a.tahun != b.tahun) {
         return a.tahun - b.tahun; // tahun lebih kecil diatas
     }
-    return strcpy(a.name, b.name); // Nama alfabetis lebih awal lebih baik
-    return strcpy(a.kategori, b.kategori); // kategori dengan alfabetis lebih awal lebih baik
+    return strcmp(a.name, b.name); // Nama alfabetis lebih awal lebih baik
+    return strcmp(a.kategori, b.kategori); // kategori dengan alfabetis lebih awal lebih baik
 }
 
 int main() {
@@ -36,10 +36,10 @@ int main() {
         scanf("%s %s %d %d", artfk[i].name, &artfk[i].kategori, artfk[i].tahun, &artfk[i].nilai);
     }
 
-    char *name[] = {"Orb", "Rune", "Aegis", "Zeta", "Alpha", "Beta", "Gamma", "A", "B", "C",};
+    char *name[] = {"Orb", "Rune", "Aegis", "Zeta", "Alpha", "Beta", "Gamma", "A", "B", "C","N1", "N2", "N3", "N4", "N5", "N6"};
 
     // Mencari dan mencetak penjaga terbaik untuk setiap shift
-    for (int s = 0; s < 3; s++) {
+    for (int s = 0; s < 12; s++) {
         artefak best_artefak;
         int found = 0;
 
