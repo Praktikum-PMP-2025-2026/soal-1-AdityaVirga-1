@@ -4,7 +4,7 @@
 
 typedef struct {
     char name[100];
-    char kategori[50];
+    char kategori[100];
     int tahun;
     int nilai;
 } artefak;
@@ -44,11 +44,14 @@ int main() {
         for (int i = 0; i < n; i++) {
             // Jika ini artefak pertama yang ditemukan atau lebih baik dari yang terbaik sejauh ini
             if (!found || compare_artefak(artfk[i], best_artefak) < 0) {
-                best_artefak = artfk[i];
-                i = i -1; 
+                best_artefak =(artfk[i]);
                 found = 1;
-                return i;
-            }
+            
+                for (int j = i; j < n - 1; j++) {
+                    artfk[j] = artfk[j + 1]; // Geser elemen ke kiri
+                    n--; 
+                }
+            }        
         }
 
         // Mencetak hasil sesuai format
