@@ -44,7 +44,8 @@ int main() {
         for (int i = 0; i < n; i++) {
             // Jika ini artefak pertama yang ditemukan atau lebih baik dari yang terbaik sejauh ini
             if (!found || compare_artefak(artfk[i], best_artefak) < 0) {
-                best_artefak = artfk[i++];
+                best_artefak = artfk[i];
+                i = n -1;
                 found = 1;
                 
             }
