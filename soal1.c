@@ -4,9 +4,10 @@
 
 typedef struct {
     char name[100];
-    char kategori[100];
+    char kategori;
     int tahun;
     int nilai;
+    
 } artefak;
 
 // Fungsi untuk membandingkan dua artefak berdasarkan aturan prioritas
