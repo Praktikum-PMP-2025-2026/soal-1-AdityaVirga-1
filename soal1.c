@@ -18,8 +18,8 @@ int compare_artefak(artefak a, artefak b) {
     if (a.tahun != b.tahun) {
         return a.tahun - b.tahun; // tahun lebih kecil diatas
     }
-    return (a.name, b.name); // Nama alfabetis lebih awal lebih baik
-    return (a.kategori, b.kategori); // kategori dengan alfabetis lebih awal lebih baik
+    return strcpy(a.name, b.name); // Nama alfabetis lebih awal lebih baik
+    return strcpy(a.kategori, b.kategori); // kategori dengan alfabetis lebih awal lebih baik
 }
 
 int main() {
